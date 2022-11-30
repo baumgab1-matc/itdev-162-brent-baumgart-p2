@@ -1,0 +1,18 @@
+
+<div>
+    <a [routerLink]="['/create-profile']" class="btn btn-primary">Add Profile</a>
+</div>
+
+<div class="row">
+    <ng-container *ngFor="let grad of grads" >
+        <div class="col-sm-3 d-flex justify-content-center p-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h2 class="card-title">{{grad.userName}}</h2>
+            <p>{{grad.userName}} is selling {{grad.items.length}} items</p>
+            <a [routerLink]="['/profile', grad.id]">View Profile</a>
+            </div>
+        </div>
+        </div>
+    </ng-container>
+</div>
